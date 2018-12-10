@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LifeNote
+
+  Created by 第一反应 on 2018/12/10.
+  Copyright © 2018 Sonia. All rights reserved.
+*/
+
+"TabBarTitle1"="Discover";
+"TabBarTitle2"="Nearby";
+"TabBarTitle3"="";
