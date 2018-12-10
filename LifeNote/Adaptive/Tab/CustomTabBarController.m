@@ -11,6 +11,7 @@
 #import "HomeViewController.h"
 #import "MapViewController.h"
 #import "AccountViewController.h"
+#import "MenuViewController.h"
 
 @implementation CustomTabBarController
 
@@ -21,14 +22,24 @@
 }
 
 - (void)setupTabBar {
-    NSArray <CustomNavigationController *>*controllers = @[[[CustomNavigationController alloc] initWithRootViewController:[[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil]],
-                                                           [[CustomNavigationController alloc] initWithRootViewController:[[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil]],
-                                                           [[CustomNavigationController alloc] initWithRootViewController:[[AccountViewController alloc] initWithNibName:@"AccountViewController" bundle:nil]]];
+    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:[[CustomNavigationController alloc] initWithRootViewController:[[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil]]
+                               leftMenuViewController:[[CustomNavigationController alloc] initWithRootViewController:[[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil]]
+                              rightMenuViewController:nil];
+    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"LaunchScreenImage"];
+    
+    NSArray *controllers = @[sideMenuViewController,
+                             [[CustomNavigationController alloc] initWithRootViewController:[[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil]],
+                             [[CustomNavigationController alloc] initWithRootViewController:[[AccountViewController alloc] initWithNibName:@"AccountViewController" bundle:nil]]];
     
     for (int i = 0; i < controllers.count; i++) {
-        UIViewController *vc = controllers[i].childViewControllers[0];
-        vc.tabBarItem.image = [[UIImage imageNamed:[NSString stringWithFormat:@"item_%d", i + 1]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        vc.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"item_%d_s", i + 1]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        if (i == 0) {
+            RESideMenu *sideMenuViewController = controllers[i];
+            sideMenuViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"" image:[[UIImage imageNamed:[NSString stringWithFormat:@"item_%d", i + 1]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:[NSString stringWithFormat:@"item_%d_s", i + 1]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
+        else {
+            CustomNavigationController *nav = controllers[i];
+            nav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"" image:[[UIImage imageNamed:[NSString stringWithFormat:@"item_%d", i + 1]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:[NSString stringWithFormat:@"item_%d_s", i + 1]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
     }
     
     self.viewControllers = controllers;

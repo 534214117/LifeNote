@@ -23,6 +23,8 @@
 		04FCA4A821BE29450046D4BB /* daniel-bold.woff.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04FCA4A721BE29450046D4BB /* daniel-bold.woff.ttf */; };
 		04FCA4B321BE2BF60046D4BB /* UIFont+UIFontMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCA4B221BE2BF60046D4BB /* UIFont+UIFontMore.m */; };
 		0B6D8E62D3B8CBF8EE4F38B9 /* libPods-LifeNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1846C794D22C488FAB02387 /* libPods-LifeNote.a */; };
+		F5AF3E1721BED08A0081BE5C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AF3E1521BED08A0081BE5C /* MenuViewController.m */; };
+		F5AF3E1821BED08A0081BE5C /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5AF3E1621BED08A0081BE5C /* MenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,9 @@
 		60660AEF69AD86ECFBF06446 /* Pods-LifeNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeNote/Pods-LifeNote.debug.xcconfig"; sourceTree = "<group>"; };
 		B1846C794D22C488FAB02387 /* libPods-LifeNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LifeNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B3E1D88879A5AEE3802A37 /* Pods-LifeNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeNote/Pods-LifeNote.release.xcconfig"; sourceTree = "<group>"; };
+		F5AF3E1421BED08A0081BE5C /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		F5AF3E1521BED08A0081BE5C /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		F5AF3E1621BED08A0081BE5C /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +158,7 @@
 		04FCA49521BE25CF0046D4BB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F5AF3E1321BED0710081BE5C /* MenuPage */,
 				04ED289A21BE42B4009FD876 /* AccountPage */,
 				04ED289421BE3FEC009FD876 /* MapPage */,
 				04FCA49621BE25E20046D4BB /* HomePage */,
@@ -222,6 +228,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F5AF3E1321BED0710081BE5C /* MenuPage */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF3E1421BED08A0081BE5C /* MenuViewController.h */,
+				F5AF3E1521BED08A0081BE5C /* MenuViewController.m */,
+				F5AF3E1621BED08A0081BE5C /* MenuViewController.xib */,
+			);
+			path = MenuPage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,6 +299,7 @@
 				04FCA48721BE15980046D4BB /* LaunchScreen.storyboard in Resources */,
 				04FCA48421BE15980046D4BB /* Assets.xcassets in Resources */,
 				04FCA4A821BE29450046D4BB /* daniel-bold.woff.ttf in Resources */,
+				F5AF3E1821BED08A0081BE5C /* MenuViewController.xib in Resources */,
 				04ED28A321BE43B5009FD876 /* Localizable.strings in Resources */,
 				04ED289921BE4017009FD876 /* MapViewController.xib in Resources */,
 				04ED289F21BE42CF009FD876 /* AccountViewController.xib in Resources */,
@@ -319,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FCA48A21BE15980046D4BB /* main.m in Sources */,
+				F5AF3E1721BED08A0081BE5C /* MenuViewController.m in Sources */,
 				04FCA47C21BE15960046D4BB /* AppDelegate.m in Sources */,
 				04548EAF21BE2FF600B88F73 /* CustomTabBarController.m in Sources */,
 				04FCA4B321BE2BF60046D4BB /* UIFont+UIFontMore.m in Sources */,
