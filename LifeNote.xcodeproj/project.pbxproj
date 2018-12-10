@@ -130,7 +130,6 @@
 				04FCA4A621BE293A0046D4BB /* Font */,
 				04FCA4A921BE2B170046D4BB /* Category */,
 				04FCA49C21BE26E20046D4BB /* Adaptive */,
-				04FCA49421BE25CF0046D4BB /* Modal */,
 				04FCA49521BE25CF0046D4BB /* ViewController */,
 				04FCA49021BE16600046D4BB /* Default */,
 			);
@@ -149,13 +148,6 @@
 				04FCA4AD21BE2B710046D4BB /* PrefixHeader.pch */,
 			);
 			name = Default;
-			sourceTree = "<group>";
-		};
-		04FCA49421BE25CF0046D4BB /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modal;
 			sourceTree = "<group>";
 		};
 		04FCA49521BE25CF0046D4BB /* ViewController */ = {

@@ -16,10 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setupNav];
+}
+
+- (void)setupNav {
     self.navigationItem.title = InternationalString(@"TabBarTitle1");
+    self.navigationController.navigationBarHidden = YES;
     [UIFont setupDefaultNavTitle:self];
-    
 }
 
 /*
